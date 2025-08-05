@@ -234,7 +234,7 @@ function handleShare() {
   let roast1 = roast1El.textContent;
   let roast2 = roast2El.textContent;
   let tweetText =
-    `I just got Roasted by Union Capybara! 🔥\nHe said:\n\n${roast1}\n${roast2}\n\nGet yourself cooked: ${SITE_URL}`;
+    `I just got Roasted by Union Capybara! 🔥\nHe said:\n\n${roast1}\n${roast2}\n\nGet yourself cooked: ${SITE_URL}\n\nhttps://x.com/Shinosuka_eth/status/1952735376000368958`;
   let shareUrl = X_SHARE_URL + encodeURIComponent(tweetText);
   window.open(shareUrl, "_blank");
 }
