@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/supermolot');
+
+/* Root & Global */
+:root {
+  --primary: #000000;
+  --secondary: #ABECFD;
+  --roast-heading: #ff8c1a;
+  --roast-line: #ff4200;
+  --box-bg: #23272d;
+  --box-border: #ABECFD;
+  --footer-bg: #16181c;
+  --grey-bg: #262a31;
+  --input-bg: #202226;
+  --input-border: #ABECFD;
+  --btn-bg: #262a31;
+  --btn-hover: #ff8621;
+}
+
+html, body {
+  background: var(--primary);
+  color: var(--secondary);
+  font-family: 'JetBrains Mono', monospace;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* HEADER */
+.union-header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 64px;
+  background: var(--grey-bg);
+  border-bottom: 2.5px solid var(--box-border);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header-content {
+  width: 100%;
+  max-width: 1180px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+}
+.union-logo {
+  height: 48px;
+  width: auto;
+  margin-right: 18px;
+  margin-left: 0;
+  display: block;
+}
+.header-title {
+  font-family: 'Supermolot', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--secondary);
+  letter-spacing: 2px;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+/* FOOTER */
+.union-footer {
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  background: var(--grey-bg);
+  border-top: 2.5px solid var(--box-border);
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+.footer-note {
+  color: var(--secondary);
+  font-size: 1rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-style: italic;
+  font-weight: 400;
+  opacity: 0.85;
+  letter-spacing: 1px;
+}
+
+/* Centered Content (landing & roast) */
+.center-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 84px;
+  padding-bottom: 56px;
+  box-sizing: border-box;
+}
+
+/* LANDING BOX */
+.landing-box {
+  background: var(--box-bg);
+  border: 2.5px solid var(--box-border);
+  border-radius: 18px;
+  box-shadow: 0 6px 28px rgba(0,0,0,0.23);
+  max-width: 420px;
+  width: 95vw;
+  padding: 38px 26px 32px 26px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+.landing-image {
+  width: 136px;
+  height: 136px;
+  border-radius: 12px;
+  border: 2px solid var(--box-border);
+  object-fit: cover;
+  margin-bottom: 18px;
+}
+.landing-heading {
+  font-family: 'Supermolot', Arial, sans-serif;
+  font-size: 2.1rem;
+  color: var(--secondary);
+  margin-bottom: 10px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 1.5px;
+}
+.landing-desc {
+  color: #cdeffd;
+  font-size: 1.09rem;
+  font-family: 'JetBrains Mono', monospace;
+  text-align: center;
+  margin-bottom: 8px;
+  line-height: 1.6;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+.input-row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+#usernameInput {
+  width: 92%;
+  padding: 12px 16px;
+  background: var(--input-bg);
+  border: 2px solid var(--input-border);
+  border-radius: 10px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.14rem;
+  color: var(--secondary);
+  transition: border 0.2s;
+  outline: none;
+}
+#usernameInput:focus {
+  border: 2.5px solid #ffaa30;
+}
+
+.roast-btn {
+  width: 98%;
+  padding: 13px 0;
+  background: var(--btn-bg);
+  border: 2.2px solid var(--btn-hover);
+  border-radius: 11px;
+  color: var(--secondary);
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  font-size: 1.12rem;
+  letter-spacing: 1.2px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: 
+    background 0.17s, 
+    color 0.16s, 
+    transform 0.18s,
+    border-color 0.16s;
+}
+.roast-btn:hover, .share-btn:hover {
+  background: var(--btn-hover);
+  color: #fff;
+  transform: scale(1.04);
+  border-color: #ff8c1a;
+}
+
+/* ROAST BOX */
+.roast-box {
+  background: var(--box-bg);
+  border: 2.5px solid var(--box-border);
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+  width: 98vw;
+  max-width: 650px;
+  min-width: 220px;
+  padding: 48px 20px 32px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  margin-top: 18px;
+  box-sizing: border-box;
+}
+
+.roast-image {
+  width: 186px;
+  height: 186px;
+  border-radius: 16px;
+  border: 2.5px solid var(--box-border);
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.roast-heading {
+  font-family: 'Supermolot', Arial, sans-serif;
+  font-size: 2.4rem;
+  color: var(--roast-heading);
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 6px;
+}
+
+.chicken-emoji {
+  font-size: 2.1rem;
+  vertical-align: middle;
+}
+
+.roast-lines {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 13px;
+  width: 100%;
+}
+
+.roast-line {
+  color: var(--roast-line);
+  background: rgba(255,66,0,0.07);
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  font-size: 1.15rem;
+  padding: 13px 18px;
+  border-radius: 9px;
+  letter-spacing: 1px;
+  width: 100%;
+  text-align: center;
+  white-space: normal;         /* Allows wrapping */
+  word-break: break-word;      /* Forces long words to break */
+  overflow: visible;           /* Never hides overflow */
+  box-sizing: border-box;
+  margin-bottom: 4px;
+}
+
+.roast-footnote {
+  color: #cdeffd;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1rem;
+  font-style: italic;
+  margin-top: 8px;
+  text-align: center;
+  opacity: 0.86;
+  font-weight: 400;
+}
+
+.share-btn {
+  width: 98%;
+  padding: 13px 0;
+  background: var(--btn-bg);
+  border: 2.2px solid var(--btn-hover);
+  border-radius: 11px;
+  color: var(--secondary);
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: 1.2px;
+  margin-top: 12px;
+  cursor: pointer;
+  transition: 
+    background 0.18s, 
+    color 0.16s, 
+    transform 0.19s,
+    border-color 0.16s;
+}
+
+.share-btn:hover {
+  background: var(--btn-hover);
+  color: #fff;
+  transform: scale(1.04);
+  border-color: #ff8c1a;
+}
+
+@media (max-width: 720px) {
+  .header-title { font-size: 1.28rem; }
+  .union-logo { height: 35px; }
+  .landing-box, .roast-box { padding: 22px 3vw 20px 3vw; }
+  .roast-heading { font-size: 1.24rem; }
+  .roast-line { font-size: 1rem; padding: 10px 4vw; }
+  .roast-image { width: 108px; height: 108px; }
+}
+@media (max-width: 480px) {
+  .header-content { padding: 0 8px; }
+  .footer-note { font-size: 0.88rem; }
+  .landing-box, .roast-box { max-width: 99vw; }
+  }
