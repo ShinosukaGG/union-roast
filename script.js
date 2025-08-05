@@ -1,6 +1,6 @@
 // -------------------- CONFIG --------------------
 
-const X_SHARE_URL = "https://x.com/Shinosuka_eth/status/1952735376000368958";
+const X_SHARE_URL = "https://x.com/intent/tweet?text=";
 const SITE_URL = "union-roast.vercel.app";
 const roastImage = "capybara-roast.png";
 
